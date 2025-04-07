@@ -1,0 +1,420 @@
+/* Need to import this to use the Montserrat font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+/* @import url(https://db.onlinewebfonts.com/c/3c76d979e72206bc554a1863d96ac5d4?family=Neue+Haas+Grotesk+Text+Pro); */
+
+/* life hack starts */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    overscroll-behavior-y: none;
+}
+
+.brand {
+    display: inline-block;
+    /* outline: 1px solid black; */
+}
+
+.sotto {
+    font-family: "Neue Haas Grotesk Text Pro", "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #000;
+}
+
+.engineering {
+    font-family: "Neue Haas Grotesk Text Pro", "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: normal;
+    color: #37603D;
+}
+
+.green {
+    color: #37603D;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+#about,
+#services,
+#products,
+#facilities,
+#contact {
+    scroll-margin-top: 20vh;
+    scroll-snap-align: start;
+    /* Same as header height */
+}
+
+#home {
+    scroll-snap-align: start;
+}
+/* life hack ends */
+
+/* header starts */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: whitesmoke;
+    /* outline: 1px solid black; */
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto; /* To center the content, without this they are 80% apart but on the left most*/
+    height: 20vh;
+    align-items: center;
+    /* outline: 1px solid black; */
+}
+
+.header .logo img {
+    display: flex;
+    width: 100%;
+}
+/* header ends */
+/* home section starts */
+.home .container {
+    padding-top: 20vh; /* To make home content below the fixed header */
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    /* outline: 1px solid black; */
+}
+
+.homecontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    flex: 1;
+    /* outline: 1px solid black; */
+}
+
+.homecontent h3 {
+    font-size: 3.5rem;
+    color: #000;
+    text-align: left;
+    /* outline: 1px solid black; */
+}
+
+.homecontent p {
+    text-align: justify;
+    padding-top: 1rem;
+    line-height: 2;
+    /* outline: 1px solid black; */
+}
+
+.home .logo {
+    display: flex;
+    flex: 1;
+    /* outline: 1px solid black; */
+}
+
+.home .logo img {
+    width: 100%;
+}
+
+.menu a {
+    text-decoration: none;
+    margin-left: 1rem;
+    color: #000;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #37603D;
+}
+/* home section ends */
+/* about section starts */
+.about {
+    background: whitesmoke;
+}
+
+.about .container {
+    width: 80%;
+    margin: 0 auto;
+    height: 80vh;
+    display: flex;
+    gap: 3rem;
+    overflow: hidden; /* If paragraph is too long, it overflows the height: 80vh so needed to be hidden */
+    /* outline: 1px solid black; */
+}
+
+.about .image {
+    display: flex;
+    flex: 1;
+    /* outline: 1px solid black; */
+}
+
+.about .image img {
+    display: flex;
+    width: 100%;
+    border-radius: 5%;
+}
+
+.aboutcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start from the top */
+    align-items: center;
+    flex: 1;
+    /* outline: 1px solid black; */
+}
+
+.aboutcontent h3 {
+    font-size: 2rem;
+    text-align: left;
+    width: 100%; /* need to add to fill up remaining spaces so text-align will work */
+    /* outline: 1px solid black; */
+}
+
+.aboutscroll {
+    overflow-y: auto;
+    max-height: 100%;
+    padding-right: 1rem;
+    /* outline: 1px solid black; */
+}
+
+.aboutcontent p {
+    padding-top: 1rem;
+    line-height: 2;
+    text-align: justify;
+    /* outline: 1px solid black; */
+}
+/* about section ends */
+/* services section starts */
+.services .container {
+    width: 80%;
+    margin: 0 auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* outline: 1px solid black; */
+}
+
+.services h1 {
+    text-align: center;
+    /* outline: 1px solid black; */
+}
+
+.services .row {
+    display: flex;
+    gap: 3rem;
+    /* outline: 1px solid black; */
+}
+
+.services .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+    background-color: white;
+    border: 0.1rem solid #000;
+    /* outline: 1px solid black */
+}
+
+.services .column:hover {
+    background-color: #37603D;
+    border: 0.1rem solid #000;
+}
+
+.services .column:hover h3 {
+    color: #fff;
+}
+
+.services .column:hover p {
+    color: #fff;
+}
+
+.services .column img {
+    max-height: 5rem;
+    margin-top: 1rem;
+    /* outline: 1px solid black; */
+}
+
+.services .column p {
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    /* outline: 1px solid black; */
+}
+/* services section ends */
+/* products section starts */
+.products {
+    background: whitesmoke;
+}
+
+.products .container {
+    width: 80%;
+    margin: 0 auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* outline: 1px solid black; */
+}
+
+.products h1 {
+    text-align: center;
+    /* outline: 1px solid black; */
+}
+
+.products .row {
+    display: flex;
+    gap: 3rem;
+    /* outline: 1px solid black; */
+}
+
+.products .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+    background-color: white;
+    border: 0.1rem solid #000;
+    /* outline: 1px solid black */
+}
+
+.products .column:hover {
+    background-color: #37603D;
+    border: 0.1rem solid #000;
+}
+
+.products .column:hover h3 {
+    color: #fff;
+}
+
+.products .column:hover p {
+    color: #fff;
+}
+
+.products .column img {
+    max-height: 5rem;
+    margin-top: 1rem;
+    /* outline: 1px solid black; */
+}
+
+.products .column p {
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    /* outline: 1px solid black; */
+}
+/* products section ends */
+/* facilities section starts */
+.facilities .container {
+    width: 80%;
+    margin: 0 auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    /* outline: 1px solid black; */
+}
+
+.facilities h1 {
+    text-align: center;
+    /* outline: 1px solid black; */
+}
+
+.facilities .row {
+    display: flex;
+    gap: 3rem;
+    /* outline: 1px solid black; */
+}
+
+.facilities .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+    background-color: white;
+    border: 0.1rem solid #000;
+    /* outline: 1px solid black */
+}
+
+.facilities .column:hover {
+    background-color: #37603D;
+    border: 0.1rem solid #000;
+}
+
+.facilities .column:hover h3 {
+    color: #fff;
+}
+
+.facilities .column:hover p {
+    color: #fff;
+}
+
+.facilities .column img {
+    max-height: 5rem;
+    margin-top: 1rem;
+    /* outline: 1px solid black; */
+}
+
+.facilities .column p {
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    /* outline: 1px solid black; */
+}
+/* facilities section ends*/
+/* contact section starts*/
+.contact {
+    background-color: whitesmoke;
+}
+
+.contact .container {
+    width: 80%;
+    margin: 0 auto;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact h1 {
+    text-align: center;
+    /* outline: 1px solid black; */
+}
+/* contact section ends*/
+/* footer section starts */
+.footer {
+    background-color: whitesmoke;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer .container {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+/* footer section ends */
